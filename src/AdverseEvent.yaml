@@ -97,3 +97,5 @@ elements:
               experimental: false
               date: "2020-12-18"
               publisher: AstraZeneca
+  study:
+    minItems: 2  
