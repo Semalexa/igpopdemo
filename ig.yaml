@@ -1,5 +1,5 @@
 id: hl7.fhir.ae
 title: AstraZeneca FHIR IG
-url: https://semalexa.github.io/ig-az
+url: https://semalexa.github.io/igpopdemo
 description: AstraZeneca Adverse Event Implementation Guide
 fhir: 4.0.0
