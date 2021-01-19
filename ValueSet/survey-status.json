@@ -1,0 +1,21 @@
+{
+  "compose" : {
+    "include" : [ {
+      "system" : "urn:CodeSystem:survey-status",
+      "concept" : [ {
+        "code" : "req-det",
+        "display" : "Requested detailed investigation"
+      }, {
+        "code" : "N/A",
+        "display" : "No further cooperation is available"
+      } ]
+    } ]
+  },
+  "resourceType" : "ValueSet",
+  "id" : "survey-status",
+  "url" : "https://semalexa.github.io/igpopdemo/ValueSet/nullsurvey-status",
+  "name" : "SurveyStatus",
+  "title" : "survey status",
+  "status" : "active",
+  "date" : "2021-01-19T22:04:46Z"
+}

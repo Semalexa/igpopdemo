@@ -1,0 +1,88 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "Condition",
+  "url" : "https://semalexa.github.io/igpopdemo/StructureDefinition/Condition",
+  "name" : "AZConditionProfile",
+  "title" : "AZ Condition Profile",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-09-30",
+  "publisher" : "AstraZeneca",
+  "description" : "Defines AZ constraints and extensions on the Condition resource",
+  "fhirVersion" : "4.0.1",
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Condition",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [ {
+      "id" : "Condition.extension",
+      "path" : "Condition.extension",
+      "mustSupport" : true,
+      "slicing" : {
+        "discriminator" : [ {
+          "type" : "value",
+          "path" : "url"
+        } ],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    }, {
+      "id" : "Condition.extension:duration",
+      "path" : "Condition.extension",
+      "mustSupport" : true,
+      "type" : [ {
+        "code" : "Extension",
+        "profile" : [ "https://semalexa.github.io/igpopdemo/StructureDefinition/Condition-duration" ]
+      } ],
+      "sliceName" : "duration",
+      "isModifier" : false
+    }, {
+      "id" : "Condition.extension:seriousness",
+      "path" : "Condition.extension",
+      "mustSupport" : true,
+      "type" : [ {
+        "code" : "Extension",
+        "profile" : [ "https://semalexa.github.io/igpopdemo/StructureDefinition/Condition-seriousness" ]
+      } ],
+      "binding" : {
+        "valueSet" : "https://semalexa.github.io/igpopdemo/ValueSet/nullcondition-seriousness",
+        "strength" : "extensible",
+        "description" : "The value should be from the valueset detailed-ethnicity"
+      },
+      "sliceName" : "seriousness",
+      "isModifier" : false
+    }, {
+      "id" : "Condition.extension:resultingCondition",
+      "path" : "Condition.extension",
+      "mustSupport" : true,
+      "type" : [ {
+        "code" : "Extension",
+        "profile" : [ "https://semalexa.github.io/igpopdemo/StructureDefinition/Condition-resultingCondition" ]
+      } ],
+      "binding" : {
+        "valueSet" : "https://semalexa.github.io/igpopdemo/ValueSet/nullresulting-condition",
+        "strength" : "extensible",
+        "description" : "The value should be from the valueset detailed-ethnicity"
+      },
+      "sliceName" : "resultingCondition",
+      "isModifier" : false
+    }, {
+      "id" : "Condition.extension:outcome",
+      "path" : "Condition.extension",
+      "mustSupport" : true,
+      "type" : [ {
+        "code" : "Extension",
+        "profile" : [ "https://semalexa.github.io/igpopdemo/StructureDefinition/Condition-outcome" ]
+      } ],
+      "binding" : {
+        "valueSet" : "https://semalexa.github.io/igpopdemo/ValueSet/nullcondition-outcome",
+        "strength" : "extensible",
+        "description" : "The value should be from the valueset detailed-ethnicity"
+      },
+      "sliceName" : "outcome",
+      "isModifier" : false
+    } ]
+  }
+}

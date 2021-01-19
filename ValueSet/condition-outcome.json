@@ -1,0 +1,33 @@
+{
+  "compose" : {
+    "include" : [ {
+      "system" : "urn:CodeSystem:condition-outcome",
+      "concept" : [ {
+        "code" : "resolved",
+        "display" : "Resolved"
+      }, {
+        "code" : "recovering",
+        "display" : "Recovering"
+      }, {
+        "code" : "ongoing",
+        "display" : "Ongoing"
+      }, {
+        "code" : "resolvedWithSequelae",
+        "display" : "Resolved with Sequelae"
+      }, {
+        "code" : "fatal",
+        "display" : "Fatal"
+      }, {
+        "code" : "unknown",
+        "display" : "Unknown"
+      } ]
+    } ]
+  },
+  "resourceType" : "ValueSet",
+  "id" : "condition-outcome",
+  "url" : "https://semalexa.github.io/igpopdemo/ValueSet/nullcondition-outcome",
+  "name" : "ConditionOutcome",
+  "title" : "condition outcome",
+  "status" : "active",
+  "date" : "2021-01-19T22:04:47Z"
+}
